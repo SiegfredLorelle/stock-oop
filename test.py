@@ -1,5 +1,4 @@
 from stock import Stock
-
 def main():
     # Create a stock for intel
     intelStock = Stock("INTC", "Intel Corporation", 20.5, 20.35)
