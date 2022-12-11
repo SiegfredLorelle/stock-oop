@@ -32,8 +32,18 @@ class Stock:
 
 
     # SETTER FOR CURRENT PRICE VERY SIMILAR TO PREVIOUS COLSING PRICE
+    def setCurrentPrice(self, newCurrentPrice):
+        if isinstance(newCurrentPrice, int):
+            newCurrentPrice = float(newCurrentPrice)
+        if isinstance(newCurrentPrice, float) and newCurrentPrice >= 0:
+            self.__currentPrice = newCurrentPrice
+        else:
+            raise ValueError("Setting new Current Price must be a positive number")
+        
 
     # GET PERCENT METHOD 
+    def getChangePercent(self):
+        return ( (self.__currentPrice - self.__previousClosingPrice) / self.__previousClosingPrice ) * 100
 
     # FOLLOW TEST EXAMPLE
     
