@@ -66,8 +66,9 @@ class Stock:
         """ Returns the percentage change from previous closing price to current price """
         return ( (self.__currentPrice - self.__previousClosingPrice) / self.__previousClosingPrice ) * 100
 
-    
 
+
+# TEST (suggest using the uploaded test.py for testing)
 def main():
     # Create a stock for intel
     intelStock = Stock("INTC", "Intel Corporation", 20.5, 20.35)
